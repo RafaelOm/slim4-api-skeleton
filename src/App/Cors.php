@@ -10,6 +10,7 @@ return static function (App $app): void {
     $app->options('/{routes:.+}', function (Request $request, Response $response) {
         return $response;
     });
+    
 
     $app->add(function (Request $request, $handler): Response {
         $response = $handler->handle($request);
